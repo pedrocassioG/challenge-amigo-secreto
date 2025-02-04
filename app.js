@@ -2,6 +2,7 @@ let listaDeNome = [];
 numeroDeNomes = 0;
 
 function adicionarAmigo() {
+    escreveHTML('resultado',"");
     if (document.getElementById('amigo').value === '') {
         alert('Por favor insira um nome válido');
     } else {
