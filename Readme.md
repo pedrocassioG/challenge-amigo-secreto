@@ -1,7 +1,9 @@
 Gerenciador de Amigo Secreto
+
 Um projeto simples em JavaScript para adicionar nomes a uma lista e sortear um "amigo secreto".
 
 Como Funciona
+
 Adicionar Nomes:
 
 Digite um nome no campo e clique em "Adicionar".
@@ -15,6 +17,7 @@ Clique em "Sortear" para escolher um nome aleatório da lista.
 O nome sorteado é exibido, e a lista é limpa.
 
 Código Principal
+
 listaDeNome: Armazena os nomes.
 
 adicionarAmigo(): Adiciona nomes à lista e exibe na tela.
