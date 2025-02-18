@@ -1,5 +1,4 @@
 let listaDeNome = [];
-numeroDeNomes = 0;
 
 function adicionarAmigo() {
     escreveHTML('resultado',"");
@@ -9,13 +8,15 @@ function adicionarAmigo() {
         let nome = document.getElementById('amigo').value;
         let nomeCorrigido = nome.charAt(0).toUpperCase() + nome.slice(1);
         listaDeNome.push(nomeCorrigido);
-        numeroDeNomes++;
         let lista = document.getElementById('listaAmigos');
         lista.innerHTML = '';
+        numeroDeNomes = listaDeNome.length;
+        console.log(numeroDeNomes);
         for (let i = 0; i < listaDeNome.length; i++) {
             let item = document.createElement('li');
             item.textContent = listaDeNome[i];
             lista.appendChild(item);
+            console.log(numeroDeNomes)
         }
         apagaNome('amigo');
     }
@@ -37,18 +38,13 @@ function sortearAmigo() {
     if (listaDeNome.length == 0){
         alert('Por favor, insira um nome.')
     }else {
-        let numeroLista = parseInt(Math.random() * numeroDeNomes);
-        console.log(numeroLista)
+        let numeroLista = Math.floor((Math.random() * numeroDeNomes));
         let nomeSelecionado = listaDeNome[numeroLista]
         escreveHTML('resultado', `o seu amigo secreto é : ${nomeSelecionado}` );
-        console.log(nomeSelecionado)
         escreveHTML('listaAmigos', '') 
-        console.log(listaDeNome)
         sortearAmigo.value = "";
         listaDeNome = [];
         numeroDeNomes = [];
-        console.log("reset reset");
-        console.log(`o número é ${numeroLista}`)
     }
     
 }
